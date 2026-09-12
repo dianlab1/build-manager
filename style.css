@@ -1,49 +1,83 @@
-.containers {
-    border: 1px solid #000;
+:root {
+    --primary-color: #a97a57;
+    --secondary-color: #9a5938;
+    --third-color: #56483b;
+    --background-color: #f0f0f0;
+    --text-color: #f8ead9;
+    --border-color: #bfb2a1;
+}
+
+body {
+    background-image: url("images/appBackground.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* global */
+#main-heading {
+    color: var(--third-color);
+    font-size: 35px;
+    -webkit-text-stroke: 0.5px var(--text-color);
+}
+
+#back {
     cursor: pointer;
+    border: 1px solid var(--border-color);
+    padding: 5px;
     border-radius: 5px;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    margin-right: 67%;
+    font-size: 15px;
 }
 
 /* index.html */
-#main-heading {
-    color: #00fe7f;
-    font-size: 30px;
-}
-
 .containers {
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 120px;
     text-align: center;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 .inputs {
     position: fixed;
-    bottom: 50px;
+    bottom: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #left {
     cursor: pointer;
     position: fixed;
     left: 20%;
-    transform: translateX(-60%);
-    border: 1px solid #000;
+    transform: translateX(-35%);
     padding: 10px;
     border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 #right {
     cursor: pointer;
     position: fixed;
     right: 20%;
-    transform: translateX(60%);
-    border: 1px solid #000;
+    transform: translateX(35%);
     padding: 10px;
     border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 /* upload-paint.html */
@@ -55,18 +89,37 @@
     align-items: center;
 }
 
+#paint-form-box {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20%;
+    margin-top: 10px;
+}
+
+.paint-form {
+    color: var(--text-color);
+}
+
 #snapshot-result {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     height: auto;
-    display: block;
+    display: none;
 }
 
 #video-feed {
     width: 100%;
-    max-width: 350px;
+    max-width: 250px;
     height: auto;
     display: block;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.output {
+    margin: 0 auto;
 }
 
 #capture-canvas {
@@ -79,21 +132,27 @@
 #middle {
     position: fixed;
     cursor: pointer;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 1px solid #000;
+    left: 20%;
+    transform: translateX(-35%);
     padding: 10px;
     border-radius: 5px;
-}
-
-#back {
+    border: 1px solid var(--border-color);
     cursor: pointer;
-    border: 1px solid #000;
-    padding: 10px;
     border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 /* Paint Inventory */
+#sub-heading {
+    border-radius: 5px;
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    margin-right: 33%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 #paint-list {
     display: flex;
     flex-direction: column;
@@ -102,16 +161,19 @@
 }
 
 .paint-item {
-    border: 1px solid #ccc;
+    border: 1px dotted var(--border-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    margin-right: 50%;
+    cursor: pointer;
 }
 
 .paint-item h3 {
     margin: 0 0 8px 0;
-    color: #00fe7f;
+    color: var(--text-color);
 }
 
 .paint-item p {
@@ -135,7 +197,8 @@
 }
 
 .modal-content {
-    background: #fff;
+    background: var(--secondary-color);
+    color: var(--text-color);
     padding: 20px;
     border-radius: 8px;
     width: 90%;

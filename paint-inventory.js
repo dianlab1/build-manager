@@ -18,6 +18,7 @@ function renderPaintList() {
             <h3>${paint.brand}</h3>
             <p><strong>Code:</strong> ${paint.code}</p>
             <p><strong>Name:</strong> ${paint.name}</p>
+            <p><strong>Fullness:</strong> ${paint.fullness}</p>
         `;
         paintList.appendChild(paintItem);
 
@@ -68,4 +69,22 @@ document.getElementById("save-edit").addEventListener("click", function () {
 
     document.getElementById("edit-modal").classList.add("hidden");
     renderPaintList();
+});
+
+document.getElementById("delete-paint").addEventListener("click", function () {
+    let confirmed = confirm("Are you sure you want to delete this paint?");
+
+    if (!confirmed) {
+        return;
+    }
+
+    let savedPaints = JSON.parse(localStorage.getItem("savedPaints")) || [];
+
+    let updatedPaints = savedPaints.filter(function (paint) {
+        return paint.id !== currentEditId;
+    });
+
+    localStorage.setItem("savedPaints", JSON.stringify(updatedPaints));
+    renderPaintList();
+    document.getElementById("edit-modal").classList.add("hidden");
 });
