@@ -16,6 +16,33 @@
 
     <div id="paint-list"></div>
 
+    <div id="edit-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Edit Paint</h2>
+            <label for="edit-brand">Brand Name</label>
+            <input type="text" id="edit-brand">
+
+            <label for="edit-code">Color Code</label>
+            <input type="text" id="edit-code">
+
+            <label for="edit-name">Color Name</label>
+            <input type="text" id="edit-name">
+
+            <label for="edit-fullness">Fullness</label>
+            <select id="edit-fullness">
+                <option value="Full">Full</option>
+                <option value="Half">Half</option>
+                <option value="Low">Low</option>
+                <option value="Empty">Empty</option>
+            </select>
+
+            <div class="modal-buttons">
+                <button id="save-edit">Save</button>
+                <button id="close-edit">Cancel</button>
+            </div>
+        </div>
+    </div>
+
     <script src="paint-inventory.js"></script>
 </body>
 

@@ -266,10 +266,12 @@ saveBtn.addEventListener("click", function () {
     let colorName = colorNameInput.value;
 
     let savedData = {
+        id: Date.now(),
         brand: brandName,
         code: colorCode,
         name: colorName,
-        image: resultImage.src
+        image: resultImage.src,
+        fullness: "Full"
     };
     console.log(savedData);
 
