@@ -1,4 +1,13 @@
-const CACHE_NAME = "paint-inventory-v0.2";
+const CACHE_NAME = "paint-inventory-v1";
+
+self.addEventListener("install", function (event) {
+    self.skipWaiting();
+    event.waitUntil(
+        caches.open(CACHE_NAME).then(function (cache) {
+            return cache.addAll(urlsToCache);
+        })
+    );
+});
 
 const urlsToCache = [
     "/index.html",
@@ -7,7 +16,10 @@ const urlsToCache = [
     "/style.css",
     "/main.js",
     "/upload-paint.js",
-    "/paint-inventory.js"
+    "/paint-inventory.js",
+    "/icons/icon-192.png",
+    "/icons/icon-512.png",
+    "images/appBackground.png"
 ];
 
 // Runs once when the service worker is first installed
@@ -40,6 +52,8 @@ self.addEventListener("activate", function (event) {
                     }
                 })
             );
+        }).then(function () {
+            return self.clients.claim();
         })
     );
 });

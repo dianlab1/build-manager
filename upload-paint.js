@@ -285,4 +285,8 @@ saveBtn.addEventListener("click", function () {
         let newPaints = [savedData];
         localStorage.setItem("savedPaints", JSON.stringify(newPaints));
     }
+
+    colorNameInput.value = "";
+    colorCodeInput.value = "";
+    brandInput.value = "Tamiya";
 });
