@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image-scanner</title>
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- <button id="go">Read Text</button>
+    <input type="file" id="file-input" accept="image/*"> -->
+
+    <!-- <video id="video-feed" autoplay playsinline style="width: 100%; max-width: 400px;"></video>
+    <button id="capture-btn">Take Snapshot</button>
+    <canvas id="capture-canvas" style="display: none;"></canvas>
+    <img id="snapshot-result" alt="Snapshot result"> -->
+
+    <div id="main-heading">Grant S'n</div>
+
+    <div class="containers">
+        <div class="paint-box">
+            <div id="paint-inventory">Paint Inventory</div>
+        </div>
+    </div>
+
+    <div class="containers">
+        <div class="build-box">
+            <div id="build-inventory">Build Inventory</div>
+        </div>
+    </div>
+
+    <div class="inputs">
+        <div id="left">
+            <div id="paint-image">Upload Paint</div>
+        </div>
+        <div id="right">
+            <div id="build-image">Upload Build</div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image-scanner</title>
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="back">Main Menu</div>
+    <div id="main-heading">Upload Paint</div>
+
+    <div class="output">
+        <video id="video-feed" autoplay playsinline></video>
+    </div>
+    <img id="snapshot-result" alt="Snapshot result">
+    <canvas id="capture-canvas" style="display: none;"></canvas>
+
+    <div class="paint-buttons">
+        <!-- <div id="left">
+            <div id="scan-image">Scan Paint</div>
+        </div> -->
+        <div id="middle">
+            <div id="upload-image">Upload Paint</div>
+        </div>
+        <div id="right">
+            <div id="snap-image">Take Snapshot</div>
+        </div>
+    </div>
+
+    <div class="paint-form">
+        <label for="brand-name">Brand Name</label>
+        <input type="text" id="brand-name" placeholder="e.g. Tamiya">
+    </div>
+    <div class="paint-form">
+        <label for="color-code">Color Code</label>
+        <input type="text" id="color-code" placeholder="e.g. X-4">
+    </div>
+    <div class="paint-form">
+        <label for="color-name">Color Name</label>
+        <input type="text" id="color-name" placeholder="e.g. Red">
+    </div>
+
+    <script src="upload-paint.js"></script>
+</body>
+
+</html>
