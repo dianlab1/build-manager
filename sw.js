@@ -1,4 +1,4 @@
-const CACHE_NAME = "paint-inventory-v1";
+const CACHE_NAME = "paint-inventory-v2";
 
 self.addEventListener("install", function (event) {
     self.skipWaiting();
@@ -13,10 +13,14 @@ const urlsToCache = [
     "/index.html",
     "/upload-paint.html",
     "/paint-inventory.html",
+    "/build-inventory.html",
+    "upload-build.html",
     "/style.css",
     "/main.js",
     "/upload-paint.js",
     "/paint-inventory.js",
+    "upload-build.js",
+    "build-inventory.js",
     "/icons/icon-192.png",
     "/icons/icon-512.png",
     "images/appBackground.png"

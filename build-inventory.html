@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image-scanner</title>
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="back">Main Menu</div>
+    <div id="main-heading">Build Inventory</div>
+    <div id="sub-heading-build">Manage/Edit Builds</div>
+
+    <div id="build-list"></div>
+
+    <div id="edit-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Edit Build</h2>
+            <label for="edit-build-name">Build Name</label>
+            <input type="text" id="edit-build-name">
+
+            <div class="modal-buttons">
+                <button id="save-edit">Save</button>
+                <button id="delete-build">Delete</button>
+                <button id="close-edit">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="build-inventory.js"></script>
+</body>
+
+</html>

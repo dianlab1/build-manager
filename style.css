@@ -213,3 +213,65 @@ body {
     justify-content: space-between;
     margin-top: 10px;
 }
+
+/* Upload-Build */
+
+#build-form-box {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20%;
+    margin-top: 10px;
+}
+
+#build-result {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: none;
+}
+
+/* Build Inventory */
+#sub-heading-build {
+    border-radius: 5px;
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    margin-right: 70%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.build-item img {
+    max-width: 200px;
+    border-radius: 6px;
+    margin-top: 8px;
+    display: block;
+}
+
+#build-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+}
+
+.build-item {
+    border: 1px dotted var(--border-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 50%;
+    cursor: pointer;
+}
+
+.build-item h3 {
+    margin: 0 0 8px 0;
+    color: var(--text-color);
+}
+
+.build-item p {
+    margin: 4px 0;
+}

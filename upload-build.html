@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image-scanner</title>
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="back">Main Menu</div>
+    <div id="main-heading">Upload Build</div>
+
+    <div class="output">
+        <video id="video-feed" autoplay playsinline></video>
+    </div>
+    <img id="build-result" alt="Snapshot result">
+    <canvas id="capture-build" style="display: none;"></canvas>
+
+    <div class="paint-buttons">
+        <!-- <div id="left">
+            <div id="scan-image">Scan Paint</div>
+        </div> -->
+        <div id="middle">
+            <div id="upload-build">Upload Build</div>
+        </div>
+        <div id="right">
+            <div id="snap-build">Take Snapshot</div>
+        </div>
+    </div>
+
+    <div id="build-form-box">
+        <div class="build-form">
+            <label for="brand-name">Build Name</label>
+            <input type="text" id="build-name" placeholder="e.g. Car">
+        </div>
+    </div>
+
+
+    <script src="upload-build.js"></script>
+</body>
+
+</html>
