@@ -1,33 +1,24 @@
-const CACHE_NAME = "paint-inventory-v4";
-
-self.addEventListener("install", function (event) {
-    self.skipWaiting();
-    event.waitUntil(
-        caches.open(CACHE_NAME).then(function (cache) {
-            return cache.addAll(urlsToCache);
-        })
-    );
-});
+const CACHE_NAME = "paint-inventory-v4.1";
 
 const urlsToCache = [
-    "/index.html",
-    "/upload-paint.html",
-    "/paint-inventory.html",
-    "/build-inventory.html",
+    "index.html",
+    "upload-paint.html",
+    "paint-inventory.html",
+    "build-inventory.html",
     "upload-build.html",
-    "/style.css",
-    "/main.js",
-    "/upload-paint.js",
-    "/paint-inventory.js",
+    "style.css",
+    "main.js",
+    "upload-paint.js",
+    "paint-inventory.js",
     "upload-build.js",
     "build-inventory.js",
-    "/icons/icon-192.png",
-    "/icons/icon-512.png",
+    "icons/icon-192.png",
+    "icons/icon-512.png",
     "images/appBackground.png"
 ];
 
-// Runs once when the service worker is first installed
 self.addEventListener("install", function (event) {
+    self.skipWaiting();
     event.waitUntil(
         caches.open(CACHE_NAME).then(function (cache) {
             return cache.addAll(urlsToCache);

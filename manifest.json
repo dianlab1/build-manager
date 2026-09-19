@@ -2,7 +2,7 @@
     "name": "Paint & Build Inventory",
     "short_name": "Inventory",
     "description": "Scan and track Tamiya paints and builds",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#00fe7f",
