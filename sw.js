@@ -1,4 +1,4 @@
-const CACHE_NAME = "paint-inventory-v4.2";
+const CACHE_NAME = "paint-inventory-v4.3";
 
 const urlsToCache = [
     "index.html",
@@ -18,7 +18,6 @@ const urlsToCache = [
 ];
 
 self.addEventListener("install", function (event) {
-    self.skipWaiting();
     event.waitUntil(
         caches.open(CACHE_NAME).then(function (cache) {
             return cache.addAll(urlsToCache);
@@ -26,17 +25,14 @@ self.addEventListener("install", function (event) {
     );
 });
 
-// Intercepts every network request the page makes
 self.addEventListener("fetch", function (event) {
     event.respondWith(
         caches.match(event.request).then(function (response) {
-            // Serve from cache if available, otherwise fetch from network
             return response || fetch(event.request);
         })
     );
 });
 
-// Cleans up old caches when you deploy a new version
 self.addEventListener("activate", function (event) {
     event.waitUntil(
         caches.keys().then(function (cacheNames) {
@@ -51,4 +47,11 @@ self.addEventListener("activate", function (event) {
             return self.clients.claim();
         })
     );
+});
+
+// Only takes over when the page explicitly tells it to
+self.addEventListener("message", function (event) {
+    if (event.data && event.data.type === "SKIP_WAITING") {
+        self.skipWaiting();
+    }
 });

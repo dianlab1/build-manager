@@ -56,6 +56,18 @@ body {
 
 }
 
+#check-update {
+    cursor: pointer;
+    position: fixed;
+    left: 20%;
+    transform: translateX(-35%);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
 #left {
     cursor: pointer;
     position: fixed;
