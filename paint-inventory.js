@@ -11,14 +11,19 @@ function renderPaintList() {
     let savedPaints = JSON.parse(localStorage.getItem("savedPaints")) || [];
 
     savedPaints.forEach(function (paint) {
+        let hexValue = codeToHex[paint.code] || "#cccccc";
         let paintItem = document.createElement("div");
         paintItem.classList.add("paint-item");
         paintItem.setAttribute("data-id", paint.id);
         paintItem.innerHTML = `
+        <div id="paint-inv-head">
+            <div class="color-swatch" style="background-color: ${hexValue}"></div>
             <h3>${paint.brand}</h3>
+        </div>
             <p><strong>Code:</strong> ${paint.code}</p>
             <p><strong>Name:</strong> ${paint.name}</p>
             <p><strong>Fullness:</strong> ${paint.fullness}</p>
+            
         `;
         paintList.appendChild(paintItem);
 

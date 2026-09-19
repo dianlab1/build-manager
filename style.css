@@ -226,6 +226,18 @@ body {
     margin-top: 10px;
 }
 
+.color-swatch {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--border-color);
+}
+
+#paint-inv-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 /* Upload-Build */
 
 #build-form-box {

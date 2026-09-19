@@ -222,6 +222,8 @@ captureBtn.addEventListener('click', async () => {
         "XF-100": "Flat Yellow",
     };
 
+
+
     // Extract Code from the recognized text using regex pattern
     const codePattern = /[A-Z]{1,2}-\d{1,3}/;
     let codeMatch = result.data.text.match(codePattern);
