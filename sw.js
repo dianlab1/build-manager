@@ -1,4 +1,4 @@
-const CACHE_NAME = "paint-inventory-v4.4";
+const CACHE_NAME = "paint-inventory-v4.5";
 
 const urlsToCache = [
     "index.html",
