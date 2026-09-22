@@ -1,3 +1,7 @@
+/* ============================================================
+   GLOBAL VARIABLES
+   ============================================================ */
+
 :root {
     --primary-color: #a97a57;
     --secondary-color: #9a5938;
@@ -7,6 +11,11 @@
     --border-color: #bfb2a1;
 }
 
+
+/* ============================================================
+   BODY
+   ============================================================ */
+
 body {
     background-image: url("images/appBackground.png");
     background-size: cover;
@@ -15,7 +24,11 @@ body {
     background-attachment: fixed;
 }
 
-/* global */
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
 #main-heading {
     color: var(--third-color);
     font-size: 35px;
@@ -33,7 +46,11 @@ body {
     font-size: 15px;
 }
 
-/* index.html */
+
+/* ============================================================
+   INDEX.HTML
+   ============================================================ */
+
 .containers {
     padding: 10px;
     margin-top: 10px;
@@ -53,7 +70,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #check-update {
@@ -92,14 +108,106 @@ body {
     color: var(--text-color);
 }
 
-/* upload-paint.html */
+
+/* ============================================================
+   UPLOAD-PAINT.HTML
+   ============================================================ */
+
+
+/* Camera / Snapshot Container */
+
+.output {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+/* Live Camera */
+
+#video-feed {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    margin: 0;
+    object-fit: cover;
+}
+
+
+/* Captured Snapshot */
+
+#snapshot-result {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: none;
+    border-radius: 10px;
+    margin: 0;
+    object-fit: cover;
+}
+
+
+/* Hidden Canvas */
+
+#capture-canvas {
+    display: none;
+}
+
+
+/* ============================================================
+   PAINT BUTTONS
+   ============================================================ */
+
 .paint-buttons {
     position: fixed;
     bottom: 50px;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
+/* Take Snapshot */
+
+#right {
+    cursor: pointer;
+    position: fixed;
+    right: 20%;
+    transform: translateX(35%);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+
+/* Upload Paint */
+
+#middle {
+    position: fixed;
+    cursor: pointer;
+    left: 20%;
+    transform: translateX(-35%);
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+
+/* ============================================================
+   PAINT FORM
+   ============================================================ */
 
 #paint-form-box {
     background-color: var(--secondary-color);
@@ -114,48 +222,11 @@ body {
     color: var(--text-color);
 }
 
-#snapshot-result {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    display: none;
-}
 
-#video-feed {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    margin-top: 10px;
-}
+/* ============================================================
+   PAINT INVENTORY
+   ============================================================ */
 
-.output {
-    margin: 0 auto;
-}
-
-#capture-canvas {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    display: block;
-}
-
-#middle {
-    position: fixed;
-    cursor: pointer;
-    left: 20%;
-    transform: translateX(-35%);
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid var(--border-color);
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-}
-
-/* Paint Inventory */
 #sub-heading {
     border-radius: 5px;
     background-color: var(--text-color);
@@ -191,6 +262,11 @@ body {
 .paint-item p {
     margin: 4px 0;
 }
+
+
+/* ============================================================
+   MODAL
+   ============================================================ */
 
 .modal {
     position: fixed;
@@ -238,7 +314,10 @@ body {
     gap: 8px;
 }
 
-/* Upload-Build */
+
+/* ============================================================
+   UPLOAD-BUILD
+   ============================================================ */
 
 #build-form-box {
     background-color: var(--secondary-color);
@@ -256,7 +335,11 @@ body {
     display: none;
 }
 
-/* Build Inventory */
+
+/* ============================================================
+   BUILD INVENTORY
+   ============================================================ */
+
 #sub-heading-build {
     border-radius: 5px;
     background-color: var(--text-color);
