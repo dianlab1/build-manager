@@ -82,8 +82,8 @@ body {
     background-color: var(--background-color);
 
     background-image:
-        linear-gradient(rgba(238, 230, 220, 0.82),
-            rgba(238, 230, 220, 0.82)),
+        linear-gradient(rgba(238, 230, 220, 0.3),
+            rgba(238, 230, 220, 0.3)),
         url("images/appBackground.png");
 
     background-size: cover;
@@ -119,26 +119,29 @@ p {
    ============================================================ */
 
 #main-heading {
+    display: table;
+    margin: 12px auto 20px;
 
     color: var(--third-color);
 
-    font-size: clamp(28px,
-            7vw,
-            38px);
+    border-radius: 10px;
+
+    background: var(--text-color);
+
+    padding: 8px 14px;
+
+    font-size: clamp(28px, 7vw, 38px);
 
     font-weight: 800;
 
     letter-spacing: -1px;
-
-    margin: 12px 0 20px;
 
     text-align: center;
 
     -webkit-text-stroke: 0;
 
     text-shadow:
-        0 2px 0 rgba(255, 255, 255, 0.55);
-
+        0 2px 0 rgba(255, 255, 255, 0.5);
 }
 
 
@@ -332,20 +335,30 @@ p {
    ============================================================ */
 
 .inputs {
-
     position: fixed;
 
     left: 16px;
     right: 16px;
     bottom: 16px;
 
-    display: flex;
+    width: auto;
 
+    display: flex;
     justify-content: center;
     align-items: center;
 
-    z-index: 50;
+    gap: 10px;
 
+    z-index: 50;
+}
+
+.inputs #left,
+.inputs #right {
+    position: static;
+    transform: none;
+
+    width: 100%;
+    max-width: 260px;
 }
 
 
@@ -1072,11 +1085,10 @@ p {
 
     #main-heading {
 
-        margin:
-            10px 0 16px;
+        display: table;
+        margin: 10px auto 16px;
 
-        font-size:
-            30px;
+        font-size: 30px;
 
     }
 
